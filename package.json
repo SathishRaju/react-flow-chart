@@ -1,6 +1,6 @@
 {
   "name": "@mrblenny/react-flow-chart",
-  "version": "0.0.6",
+  "version": "0.0.13",
   "description": "A flexible, stateless flow chart library for react.",
   "main": "src/index.js",
   "repository": "git@github.com:MrBlenny/react-flow-chart.git",
@@ -8,26 +8,25 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",
-    "@storybook/addon-centered": "^5.0.6",
-    "@storybook/addon-options": "5.0.6",
-    "@storybook/addon-viewport": "5.0.6",
-    "@storybook/react": "5.0.6",
+    "@storybook/addon-centered": "^5.3.18",
+    "@storybook/addon-options": "5.3.18",
+    "@storybook/addon-viewport": "5.3.18",
+    "@storybook/react": "5.3.18",
     "@types/lodash": "^4.14.118",
     "@types/node": "10.12.0",
+    "@types/pathfinding": "0.0.4",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.4",
-    "@types/storybook__addon-centered": "^3.3.2",
-    "@types/storybook__addon-options": "^4.0.1",
-    "@types/storybook__react": "^4.0.1",
-    "@types/styled-components": "^4.0.3",
+    "@types/styled-components": "^4.1.19",
     "@types/uuid": "^3.4.4",
     "@types/webpack": "4.4.17",
     "babel-loader": "^8.0.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "np": "^3.0.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.5",
     "react-json-view": "^1.19.1",
+    "styled-components": "^5.1.0",
     "ts-loader": "^5.2.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
@@ -38,13 +37,16 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "react-draggable": "^3.0.5",
-    "styled-components": "^4.0.3",
+    "pathfinding": "^0.4.18",
+    "react-draggable": "^4.3.1",
+    "react-resize-observer": "^1.1.1",
+    "react-zoom-pan-pinch": "^1.6.1",
     "uuid": "^3.3.2"
   },
   "peerDependencies": {
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start:storybook": "start-storybook -p 6006 -c config/storybook",

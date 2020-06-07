@@ -8,6 +8,7 @@ export interface IChart {
   links: {
     [id: string]: ILink,
   }
+  scale: number
   properties?: any
 
   /** System Temp */
@@ -16,7 +17,7 @@ export interface IChart {
 }
 
 export interface ISelectedOrHovered {
-  type?: 'link' | 'node' | 'port',
+  type?: 'link' | 'node' | 'port'
   id?: string
 }
 
@@ -24,11 +25,13 @@ export interface INode {
   id: string
   type: string
   position: IPosition
-  size?: ISize
+  orientation?: number
   ports: {
     [id: string]: IPort,
   }
   properties?: any
+  /** System Temp */
+  size?: ISize
 }
 
 export interface IPort {

@@ -1,8 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { IPort } from '../../'
+import { IConfig, IPort } from '../../'
 
 export interface IPortDefaultProps {
+  config: IConfig
   port: IPort
   isSelected: boolean
   isHovered: boolean
@@ -32,10 +33,10 @@ const PortDefaultInner = styled.div<{ active: boolean }>`
   cursor: pointer;
 `
 
-export const PortDefault = ({ isLinkSelected, isLinkHovered }: IPortDefaultProps) => (
+export const PortDefault = ({ isLinkSelected, isLinkHovered, config }: IPortDefaultProps) => (
   <PortDefaultOuter>
     <PortDefaultInner
-      active={isLinkSelected || isLinkHovered}
+      active={!config.readonly && (isLinkSelected || isLinkHovered)}
     />
   </PortDefaultOuter>
 )
